@@ -2,8 +2,14 @@ import { z } from "zod";
 
 import { errorSchema } from "./schemas";
 
-export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+/** Where the API lives. A trailing slash in the setting is dropped, so
+ * "https://api.example/" and "https://api.example" both work. */
+export const API_BASE_URL = baseUrl(process.env.NEXT_PUBLIC_API_BASE_URL);
+
+export function baseUrl(setting: string | undefined): string {
+  const value = setting?.trim().replace(/\/+$/, "");
+  return value || "http://localhost:8000";
+}
 
 const V1 = `${API_BASE_URL}/api/v1`;
 

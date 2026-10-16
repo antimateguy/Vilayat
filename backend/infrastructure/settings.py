@@ -69,4 +69,10 @@ class Settings(BaseSettings):
 
     @property
     def cors_origin_list(self) -> list[str]:
-        return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
+        """The allowed origins, forgiving of how they were typed: a browser
+        sends "https://site.example" with no trailing slash and no quotes, so
+        "https://site.example/" or a quoted value would never match."""
+        origins = (
+            origin.strip().strip("\"'").rstrip("/") for origin in self.cors_origins.split(",")
+        )
+        return [origin for origin in origins if origin]
