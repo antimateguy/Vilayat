@@ -30,13 +30,17 @@ API only after those checks pass; Cloudflare Pages builds the site by itself.
    It looks like
    `postgresql://user:password@ep-....eu-central-1.aws.neon.tech/neondb?sslmode=require`.
 3. Put it in the repository's `.env` (never in a chat or a commit) as
-   `PRODUCTION_DATABASE_URL=...`.
-4. Load the prepared data (needs Docker; reads the address from `.env`, so it
-   is never printed):
+   `PRODUCTION_DATABASE_URL=postgresql://...`, with no space after the `=`.
+4. Load the prepared data. This works in PowerShell, Command Prompt and Bash,
+   needs Docker, and reads the address from `.env`, so it is never printed:
 
    ```bash
-   docker run --rm --env-file .env -v "$(pwd)/db/seed:/seed:ro" educommute-db:17 sh -c 'psql "$PRODUCTION_DATABASE_URL" -c "CREATE EXTENSION IF NOT EXISTS postgis; CREATE EXTENSION IF NOT EXISTS vector;" && pg_restore --no-owner --no-privileges --dbname "$PRODUCTION_DATABASE_URL" /seed/vilayat.dump'
+   docker run --rm --env-file .env -v ./db:/db:ro educommute-db:17 sh /db/load-seed.sh
    ```
+
+   It ends with "122 areas loaded". It connects directly rather than through
+   Neon's connection pooler, because a restore sets session options a pooled
+   connection would hand on to the next client.
 
    Later schema changes are applied by the API itself when it starts
    (`alembic upgrade head`).
@@ -46,8 +50,9 @@ API only after those checks pass; Cloudflare Pages builds the site by itself.
 1. Sign up at <https://render.com> with your GitHub account and allow it to
    read the repository.
 2. **New > Blueprint**, pick the repository. Render reads `render.yaml` and
-   asks for three values:
-   - `DATABASE_URL`: the Neon connection string from step 1.
+   asks for three values (the names must be exactly these):
+   - `DATABASE_URL`: the Neon connection string from step 1 (either the
+     pooled or the direct address works).
    - `GEMINI_API_KEY`: your key from Google AI Studio (leave empty to run
      without the AI features).
    - `CORS_ORIGINS`: the website's address from step 3, for example
