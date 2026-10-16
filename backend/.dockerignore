@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+tests/
+Dockerfile
+.dockerignore
+# Downloaded timetable and street files (hundreds of MB) and job caches:
+# only the travel-time job reads them, and it runs on a developer machine.
+data/raw/
+data/cache/
+# The evaluation notebook is never run in the container.
+notebooks/
+# Evaluation material: never used by the API.
+evaluation/
+data/evaluation/

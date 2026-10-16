@@ -1,0 +1,703 @@
+{
+  "city_id": "munich",
+  "campus": {
+    "id": 8,
+    "university_id": 5,
+    "name": "City Campus",
+    "lat": 48.14888,
+    "lon": 11.56777
+  },
+  "ranked": [
+    {
+      "rank": 1,
+      "area": { "id": 106, "name": "Neuhausen-Nymphenburg" },
+      "facts": {
+        "cell_count": 17,
+        "rent": {
+          "monthly_eur": 770.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 29,
+        "amenities": { "cafe": 46, "gym": 16, "library": 8, "supermarket": 31 },
+        "job_access": { "score": 0.8202764976958525, "places_nearby": 376 }
+      },
+      "score": {
+        "total": 0.29149440465980375,
+        "components": [
+          {
+            "name": "commute",
+            "value": 0.17142857142857137,
+            "share": 0.35,
+            "reason": "29 min to campus by public transport, 6 min under your 35 min limit."
+          },
+          {
+            "name": "rent",
+            "value": 0.075,
+            "share": 0.35,
+            "reason": "Rent about 770 EUR a month, 30 EUR under your 800 EUR ceiling (placeholder figure)."
+          },
+          {
+            "name": "amenities",
+            "value": 0.5480195333695063,
+            "share": 0.15,
+            "reason": "101 everyday amenities (31 supermarkets, 46 cafes, 8 libraries, 16 gyms), about 8 per km²."
+          },
+          {
+            "name": "job_access",
+            "value": 0.8202764976958525,
+            "share": 0.15,
+            "reason": "About 376 cafes, restaurants, bars and shops within 2 km, more than in 82% of the city."
+          }
+        ]
+      },
+      "reasons": [
+        "About 376 cafes, restaurants, bars and shops within 2 km, more than in 82% of the city.",
+        "101 everyday amenities (31 supermarkets, 46 cafes, 8 libraries, 16 gyms), about 8 per km².",
+        "29 min to campus by public transport, 6 min under your 35 min limit.",
+        "Rent about 770 EUR a month, 30 EUR under your 800 EUR ceiling (placeholder figure)."
+      ],
+      "trade_off": "Weakest point is rent: Rent about 770 EUR a month, 30 EUR under your 800 EUR ceiling (placeholder figure).",
+      "full_day": {
+        "employer": { "id": 40, "name": "BMW Group Headquarters" },
+        "home_to_campus": 29,
+        "campus_to_job": 28,
+        "job_to_home": 34,
+        "campus_to_home": 30,
+        "total_minutes": 91,
+        "extra_minutes": 32
+      }
+    },
+    {
+      "rank": 2,
+      "area": { "id": 108, "name": "Milbertshofen-Am Hart" },
+      "facts": {
+        "cell_count": 19,
+        "rent": {
+          "monthly_eur": 715.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 30,
+        "amenities": { "cafe": 19, "gym": 7, "library": 2, "supermarket": 28 },
+        "job_access": { "score": 0.684331797235023, "places_nearby": 232 }
+      },
+      "score": {
+        "total": 0.28336279775426754,
+        "components": [
+          {
+            "name": "commute",
+            "value": 0.1428571428571429,
+            "share": 0.35,
+            "reason": "30 min to campus by public transport, 5 min under your 35 min limit."
+          },
+          {
+            "name": "rent",
+            "value": 0.2125,
+            "share": 0.35,
+            "reason": "Rent about 715 EUR a month, 85 EUR under your 800 EUR ceiling (placeholder figure)."
+          },
+          {
+            "name": "amenities",
+            "value": 0.37558685446009393,
+            "share": 0.15,
+            "reason": "56 everyday amenities (28 supermarkets, 19 cafes, 2 libraries, 7 gyms), about 4 per km²."
+          },
+          {
+            "name": "job_access",
+            "value": 0.684331797235023,
+            "share": 0.15,
+            "reason": "About 232 cafes, restaurants, bars and shops within 2 km, more than in 68% of the city."
+          }
+        ]
+      },
+      "reasons": [
+        "About 232 cafes, restaurants, bars and shops within 2 km, more than in 68% of the city.",
+        "Rent about 715 EUR a month, 85 EUR under your 800 EUR ceiling (placeholder figure).",
+        "56 everyday amenities (28 supermarkets, 19 cafes, 2 libraries, 7 gyms), about 4 per km².",
+        "30 min to campus by public transport, 5 min under your 35 min limit."
+      ],
+      "trade_off": "Weakest point is commute: 30 min to campus by public transport, 5 min under your 35 min limit.",
+      "full_day": {
+        "employer": { "id": 40, "name": "BMW Group Headquarters" },
+        "home_to_campus": 30,
+        "campus_to_job": 28,
+        "job_to_home": 26,
+        "campus_to_home": 30,
+        "total_minutes": 84,
+        "extra_minutes": 24
+      }
+    },
+    {
+      "rank": 3,
+      "area": { "id": 122, "name": "Laim" },
+      "facts": {
+        "cell_count": 7,
+        "rent": {
+          "monthly_eur": 760.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 33,
+        "amenities": { "cafe": 8, "gym": 7, "library": 1, "supermarket": 16 },
+        "job_access": { "score": 0.6797235023041475, "places_nearby": 230 }
+      },
+      "score": {
+        "total": 0.229356715390871,
+        "components": [
+          {
+            "name": "commute",
+            "value": 0.05714285714285716,
+            "share": 0.35,
+            "reason": "33 min to campus by public transport, 2 min under your 35 min limit."
+          },
+          {
+            "name": "rent",
+            "value": 0.1,
+            "share": 0.35,
+            "reason": "Rent about 760 EUR a month, 40 EUR under your 800 EUR ceiling (placeholder figure)."
+          },
+          {
+            "name": "amenities",
+            "value": 0.4826546003016592,
+            "share": 0.15,
+            "reason": "32 everyday amenities (16 supermarkets, 8 cafes, 1 library, 7 gyms), about 7 per km²."
+          },
+          {
+            "name": "job_access",
+            "value": 0.6797235023041475,
+            "share": 0.15,
+            "reason": "About 230 cafes, restaurants, bars and shops within 2 km, more than in 68% of the city."
+          }
+        ]
+      },
+      "reasons": [
+        "About 230 cafes, restaurants, bars and shops within 2 km, more than in 68% of the city.",
+        "32 everyday amenities (16 supermarkets, 8 cafes, 1 library, 7 gyms), about 7 per km².",
+        "Rent about 760 EUR a month, 40 EUR under your 800 EUR ceiling (placeholder figure).",
+        "33 min to campus by public transport, 2 min under your 35 min limit."
+      ],
+      "trade_off": "Weakest point is commute: 33 min to campus by public transport, 2 min under your 35 min limit.",
+      "full_day": {
+        "employer": { "id": 40, "name": "BMW Group Headquarters" },
+        "home_to_campus": 33,
+        "campus_to_job": 28,
+        "job_to_home": 44,
+        "campus_to_home": 33,
+        "total_minutes": 105,
+        "extra_minutes": 39
+      }
+    },
+    {
+      "rank": 4,
+      "area": { "id": 114, "name": "Obergiesing-Fasangarten" },
+      "facts": {
+        "cell_count": 6,
+        "rent": {
+          "monthly_eur": 795.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 33,
+        "amenities": { "cafe": 18, "gym": 1, "library": 1, "supermarket": 14 },
+        "job_access": { "score": 0.7211981566820276, "places_nearby": 274 }
+      },
+      "score": {
+        "total": 0.21299636388085302,
+        "components": [
+          {
+            "name": "commute",
+            "value": 0.05714285714285716,
+            "share": 0.35,
+            "reason": "33 min to campus by public transport, 2 min under your 35 min limit."
+          },
+          {
+            "name": "rent",
+            "value": 0.0125,
+            "share": 0.35,
+            "reason": "Rent about 795 EUR a month, 5 EUR under your 800 EUR ceiling (placeholder figure)."
+          },
+          {
+            "name": "amenities",
+            "value": 0.5362776025236593,
+            "share": 0.15,
+            "reason": "34 everyday amenities (14 supermarkets, 18 cafes, 1 library, 1 gym), about 8 per km²."
+          },
+          {
+            "name": "job_access",
+            "value": 0.7211981566820276,
+            "share": 0.15,
+            "reason": "About 274 cafes, restaurants, bars and shops within 2 km, more than in 72% of the city."
+          }
+        ]
+      },
+      "reasons": [
+        "About 274 cafes, restaurants, bars and shops within 2 km, more than in 72% of the city.",
+        "34 everyday amenities (14 supermarkets, 18 cafes, 1 library, 1 gym), about 8 per km².",
+        "33 min to campus by public transport, 2 min under your 35 min limit.",
+        "Rent about 795 EUR a month, 5 EUR under your 800 EUR ceiling (placeholder figure)."
+      ],
+      "trade_off": "Weakest point is rent: Rent about 795 EUR a month, 5 EUR under your 800 EUR ceiling (placeholder figure).",
+      "full_day": {
+        "employer": { "id": 40, "name": "BMW Group Headquarters" },
+        "home_to_campus": 33,
+        "campus_to_job": 28,
+        "job_to_home": 45,
+        "campus_to_home": 32,
+        "total_minutes": 106,
+        "extra_minutes": 41
+      }
+    },
+    {
+      "rank": 5,
+      "area": { "id": 115, "name": "Untergiesing-Harlaching" },
+      "facts": {
+        "cell_count": 12,
+        "rent": {
+          "monthly_eur": 775.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 35,
+        "amenities": { "cafe": 19, "gym": 10, "library": 0, "supermarket": 20 },
+        "job_access": { "score": 0.7142857142857143, "places_nearby": 278 }
+      },
+      "score": {
+        "total": 0.19719967532467533,
+        "components": [
+          {
+            "name": "commute",
+            "value": 0.0,
+            "share": 0.35,
+            "reason": "35 min to campus by public transport, 0 min under your 35 min limit."
+          },
+          {
+            "name": "rent",
+            "value": 0.0625,
+            "share": 0.35,
+            "reason": "Rent about 775 EUR a month, 25 EUR under your 800 EUR ceiling (placeholder figure)."
+          },
+          {
+            "name": "amenities",
+            "value": 0.4545454545454546,
+            "share": 0.15,
+            "reason": "49 everyday amenities (20 supermarkets, 19 cafes, 0 libraries, 10 gyms), about 6 per km²."
+          },
+          {
+            "name": "job_access",
+            "value": 0.7142857142857143,
+            "share": 0.15,
+            "reason": "About 278 cafes, restaurants, bars and shops within 2 km, more than in 71% of the city."
+          }
+        ]
+      },
+      "reasons": [
+        "About 278 cafes, restaurants, bars and shops within 2 km, more than in 71% of the city.",
+        "49 everyday amenities (20 supermarkets, 19 cafes, 0 libraries, 10 gyms), about 6 per km².",
+        "Rent about 775 EUR a month, 25 EUR under your 800 EUR ceiling (placeholder figure).",
+        "35 min to campus by public transport, 0 min under your 35 min limit."
+      ],
+      "trade_off": "Weakest point is commute: 35 min to campus by public transport, 0 min under your 35 min limit.",
+      "full_day": {
+        "employer": { "id": 40, "name": "BMW Group Headquarters" },
+        "home_to_campus": 35,
+        "campus_to_job": 28,
+        "job_to_home": 47,
+        "campus_to_home": 35,
+        "total_minutes": 110,
+        "extra_minutes": 40
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "area": { "id": 120, "name": "Allach-Untermenzing" },
+      "facts": {
+        "cell_count": 22,
+        "rent": {
+          "monthly_eur": 615.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 46,
+        "amenities": { "cafe": 5, "gym": 2, "library": 1, "supermarket": 9 },
+        "job_access": { "score": 0.18894009216589863, "places_nearby": 53 }
+      },
+      "violations": ["Commute of 46 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 98, "name": "Altstadt-Lehel" },
+      "facts": {
+        "cell_count": 6,
+        "rent": {
+          "monthly_eur": 865.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 20,
+        "amenities": {
+          "cafe": 147,
+          "gym": 19,
+          "library": 7,
+          "supermarket": 31
+        },
+        "job_access": { "score": 0.988479262672811, "places_nearby": 2359 }
+      },
+      "violations": ["Rent of 865 EUR is over your 800 EUR ceiling."]
+    },
+    {
+      "area": { "id": 102, "name": "Au-Haidhausen" },
+      "facts": {
+        "cell_count": 4,
+        "rent": {
+          "monthly_eur": 850.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 27,
+        "amenities": { "cafe": 65, "gym": 15, "library": 2, "supermarket": 20 },
+        "job_access": { "score": 0.9573732718894009, "places_nearby": 1607 }
+      },
+      "violations": ["Rent of 850 EUR is over your 800 EUR ceiling."]
+    },
+    {
+      "area": { "id": 119, "name": "Aubing-Lochhausen-Langwied" },
+      "facts": {
+        "cell_count": 45,
+        "rent": {
+          "monthly_eur": 600.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 51,
+        "amenities": { "cafe": 8, "gym": 6, "library": 1, "supermarket": 21 },
+        "job_access": { "score": 0.1912442396313364, "places_nearby": 53 }
+      },
+      "violations": ["Commute of 51 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 111, "name": "Berg am Laim" },
+      "facts": {
+        "cell_count": 8,
+        "rent": {
+          "monthly_eur": 785.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 36,
+        "amenities": { "cafe": 14, "gym": 9, "library": 2, "supermarket": 18 },
+        "job_access": { "score": 0.7062211981566819, "places_nearby": 259 }
+      },
+      "violations": ["Commute of 36 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 110, "name": "Bogenhausen" },
+      "facts": {
+        "cell_count": 34,
+        "rent": {
+          "monthly_eur": 760.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 43,
+        "amenities": { "cafe": 19, "gym": 9, "library": 2, "supermarket": 26 },
+        "job_access": { "score": 0.38824884792626724, "places_nearby": 110 }
+      },
+      "violations": ["Commute of 43 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 121, "name": "Feldmoching-Hasenbergl" },
+      "facts": {
+        "cell_count": 41,
+        "rent": {
+          "monthly_eur": 630.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 47,
+        "amenities": { "cafe": 7, "gym": 4, "library": 1, "supermarket": 21 },
+        "job_access": { "score": 0.1497695852534562, "places_nearby": 40 }
+      },
+      "violations": ["Commute of 47 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 117, "name": "Hadern" },
+      "facts": {
+        "cell_count": 13,
+        "rent": {
+          "monthly_eur": 700.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 41,
+        "amenities": { "cafe": 10, "gym": 2, "library": 8, "supermarket": 14 },
+        "job_access": { "score": 0.4631336405529954, "places_nearby": 132 }
+      },
+      "violations": ["Commute of 41 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 99, "name": "Ludwigsvorstadt-Isarvorstadt" },
+      "facts": {
+        "cell_count": 6,
+        "rent": {
+          "monthly_eur": 875.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 24,
+        "amenities": { "cafe": 72, "gym": 17, "library": 6, "supermarket": 30 },
+        "job_access": { "score": 0.9804147465437788, "places_nearby": 2168 }
+      },
+      "violations": ["Rent of 875 EUR is over your 800 EUR ceiling."]
+    },
+    {
+      "area": { "id": 100, "name": "Maxvorstadt" },
+      "facts": {
+        "cell_count": 7,
+        "rent": {
+          "monthly_eur": 860.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 13,
+        "amenities": {
+          "cafe": 115,
+          "gym": 37,
+          "library": 24,
+          "supermarket": 25
+        },
+        "job_access": { "score": 0.9700460829493087, "places_nearby": 1881 }
+      },
+      "violations": ["Rent of 860 EUR is over your 800 EUR ceiling."]
+    },
+    {
+      "area": { "id": 107, "name": "Moosach" },
+      "facts": {
+        "cell_count": 16,
+        "rent": {
+          "monthly_eur": 710.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 36,
+        "amenities": { "cafe": 5, "gym": 4, "library": 3, "supermarket": 21 },
+        "job_access": { "score": 0.5668202764976958, "places_nearby": 177 }
+      },
+      "violations": ["Commute of 36 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 118, "name": "Pasing-Obermenzing" },
+      "facts": {
+        "cell_count": 27,
+        "rent": {
+          "monthly_eur": 680.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 41,
+        "amenities": { "cafe": 18, "gym": 11, "library": 5, "supermarket": 31 },
+        "job_access": { "score": 0.7211981566820277, "places_nearby": 258 }
+      },
+      "violations": ["Commute of 41 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 113, "name": "Ramersdorf-Perlach" },
+      "facts": {
+        "cell_count": 32,
+        "rent": {
+          "monthly_eur": 740.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 41,
+        "amenities": { "cafe": 30, "gym": 11, "library": 2, "supermarket": 45 },
+        "job_access": { "score": 0.6117511520737328, "places_nearby": 198 }
+      },
+      "violations": ["Commute of 41 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 109, "name": "Schwabing-Freimann" },
+      "facts": {
+        "cell_count": 35,
+        "rent": {
+          "monthly_eur": 730.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 38,
+        "amenities": { "cafe": 40, "gym": 18, "library": 5, "supermarket": 32 },
+        "job_access": { "score": 0.38940092165898615, "places_nearby": 109 }
+      },
+      "violations": ["Commute of 38 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 101, "name": "Schwabing-West" },
+      "facts": {
+        "cell_count": 6,
+        "rent": {
+          "monthly_eur": 810.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 21,
+        "amenities": { "cafe": 27, "gym": 14, "library": 3, "supermarket": 24 },
+        "job_access": { "score": 0.9228110599078341, "places_nearby": 962 }
+      },
+      "violations": ["Rent of 810 EUR is over your 800 EUR ceiling."]
+    },
+    {
+      "area": { "id": 105, "name": "Schwanthalerhöhe" },
+      "facts": {
+        "cell_count": 2,
+        "rent": {
+          "monthly_eur": 825.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 25,
+        "amenities": { "cafe": 20, "gym": 8, "library": 1, "supermarket": 14 },
+        "job_access": { "score": 0.935483870967742, "places_nearby": 1246 }
+      },
+      "violations": ["Rent of 825 EUR is over your 800 EUR ceiling."]
+    },
+    {
+      "area": { "id": 103, "name": "Sendling" },
+      "facts": {
+        "cell_count": 6,
+        "rent": {
+          "monthly_eur": 815.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 30,
+        "amenities": { "cafe": 24, "gym": 10, "library": 2, "supermarket": 13 },
+        "job_access": { "score": 0.8997695852534562, "places_nearby": 733 }
+      },
+      "violations": ["Rent of 815 EUR is over your 800 EUR ceiling."]
+    },
+    {
+      "area": { "id": 104, "name": "Sendling-Westpark" },
+      "facts": {
+        "cell_count": 10,
+        "rent": {
+          "monthly_eur": 775.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 37,
+        "amenities": { "cafe": 16, "gym": 2, "library": 2, "supermarket": 21 },
+        "job_access": { "score": 0.8156682027649769, "places_nearby": 379 }
+      },
+      "violations": ["Commute of 37 min is over your 35 min limit."]
+    },
+    {
+      "area": {
+        "id": 116,
+        "name": "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln"
+      },
+      "facts": {
+        "cell_count": 24,
+        "rent": {
+          "monthly_eur": 690.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 41,
+        "amenities": { "cafe": 26, "gym": 15, "library": 3, "supermarket": 36 },
+        "job_access": { "score": 0.49769585253456217, "places_nearby": 144 }
+      },
+      "violations": ["Commute of 41 min is over your 35 min limit."]
+    },
+    {
+      "area": { "id": 112, "name": "Trudering-Riem" },
+      "facts": {
+        "cell_count": 30,
+        "rent": {
+          "monthly_eur": 680.0,
+          "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+          "source": "SAMPLE DATA (synthetic, not a real rent)",
+          "source_url": null,
+          "as_of": "2026-10-05",
+          "is_sample": true
+        },
+        "commute_minutes": 47,
+        "amenities": { "cafe": 12, "gym": 8, "library": 2, "supermarket": 21 },
+        "job_access": { "score": 0.46198156682027647, "places_nearby": 132 }
+      },
+      "violations": ["Commute of 47 min is over your 35 min limit."]
+    }
+  ],
+  "unchecked": []
+}

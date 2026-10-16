@@ -1,0 +1,49 @@
+{
+  "area": { "id": 106, "name": "Neuhausen-Nymphenburg" },
+  "city_id": "munich",
+  "campus": {
+    "id": 8,
+    "university_id": 5,
+    "name": "City Campus",
+    "lat": 48.14888,
+    "lon": 11.56777
+  },
+  "facts": {
+    "cell_count": 17,
+    "rent": {
+      "monthly_eur": 770.0,
+      "basis": "SAMPLE: synthetic figure for a 30 m2 flat, derived only from distance to the city centre",
+      "source": "SAMPLE DATA (synthetic, not a real rent)",
+      "source_url": null,
+      "as_of": "2026-10-05",
+      "is_sample": true
+    },
+    "commute_minutes": 29,
+    "amenities": { "cafe": 46, "gym": 16, "library": 8, "supermarket": 31 },
+    "job_access": { "score": 0.8202764976958525, "places_nearby": 376 }
+  },
+  "return_minutes": 30,
+  "listing_portals": [
+    {
+      "name": "WG-Gesucht",
+      "offers": "Rooms in shared flats",
+      "url": "https://www.wg-gesucht.de/wg-zimmer-in-Muenchen.90.0.1.0.html"
+    },
+    {
+      "name": "ImmoScout24",
+      "offers": "Flats to rent",
+      "url": "https://www.immobilienscout24.de/Suche/de/bayern/muenchen/wohnung-mieten"
+    },
+    {
+      "name": "Immowelt",
+      "offers": "Flats to rent",
+      "url": "https://www.immowelt.de/suche/muenchen/wohnungen/mieten"
+    },
+    {
+      "name": "Kleinanzeigen",
+      "offers": "Flats to rent, private offers",
+      "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/muenchen/c203l6411"
+    }
+  ],
+  "listing_hint": "Enter 'Neuhausen-Nymphenburg' as the district on the portal."
+}

@@ -1,0 +1,116 @@
+{
+  "city_id": "munich",
+  "max_rent_eur": 700.0,
+  "max_commute_minutes": 40,
+  "total_areas": 25,
+  "universities": [
+    {
+      "university": {
+        "id": 7,
+        "name": "Hochschule München",
+        "short_name": "HM"
+      },
+      "feasible": 3,
+      "campuses": [
+        {
+          "campus": {
+            "id": 12,
+            "university_id": 7,
+            "name": "Campus Lothstraße",
+            "lat": 48.15469,
+            "lon": 11.55398
+          },
+          "feasible": 0,
+          "excluded": 25,
+          "unchecked": 0,
+          "feasible_area_ids": []
+        },
+        {
+          "campus": {
+            "id": 13,
+            "university_id": 7,
+            "name": "Campus Pasing",
+            "lat": 48.14147,
+            "lon": 11.45096
+          },
+          "feasible": 3,
+          "excluded": 22,
+          "unchecked": 0,
+          "feasible_area_ids": [117, 118, 119]
+        }
+      ]
+    },
+    {
+      "university": {
+        "id": 6,
+        "name": "Ludwig-Maximilians-Universität München",
+        "short_name": "LMU"
+      },
+      "feasible": 2,
+      "campuses": [
+        {
+          "campus": {
+            "id": 11,
+            "university_id": 6,
+            "name": "Campus Großhadern",
+            "lat": 48.11381,
+            "lon": 11.4654
+          },
+          "feasible": 1,
+          "excluded": 24,
+          "unchecked": 0,
+          "feasible_area_ids": [117]
+        },
+        {
+          "campus": {
+            "id": 10,
+            "university_id": 6,
+            "name": "Main Campus",
+            "lat": 48.15048,
+            "lon": 11.57984
+          },
+          "feasible": 2,
+          "excluded": 23,
+          "unchecked": 0,
+          "feasible_area_ids": [116, 117]
+        }
+      ]
+    },
+    {
+      "university": {
+        "id": 5,
+        "name": "Technische Universität München",
+        "short_name": "TUM"
+      },
+      "feasible": 0,
+      "campuses": [
+        {
+          "campus": {
+            "id": 9,
+            "university_id": 5,
+            "name": "Campus Garching",
+            "lat": 48.26585,
+            "lon": 11.67061
+          },
+          "feasible": 0,
+          "excluded": 25,
+          "unchecked": 0,
+          "feasible_area_ids": []
+        },
+        {
+          "campus": {
+            "id": 8,
+            "university_id": 5,
+            "name": "City Campus",
+            "lat": 48.14888,
+            "lon": 11.56777
+          },
+          "feasible": 0,
+          "excluded": 25,
+          "unchecked": 0,
+          "feasible_area_ids": []
+        }
+      ]
+    }
+  ]
+}

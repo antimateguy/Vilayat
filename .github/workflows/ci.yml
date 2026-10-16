@@ -1,0 +1,65 @@
+# Lint, type checks, tests and the production build for every push and pull
+# request. Render deploys the API only after these checks pass; Cloudflare
+# Pages builds the site on its own.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Install
+        run: uv sync --frozen
+      - name: Lint and format
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+      - name: Type check
+        run: uv run mypy .
+      - name: Start the test database (PostGIS and pgvector)
+        working-directory: .
+        run: |
+          docker compose up -d db
+          for attempt in $(seq 1 60); do
+            docker compose exec -T db pg_isready -h 127.0.0.1 -U educommute && break
+            sleep 2
+          done
+      - name: Tests
+        run: uv run pytest -q
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: frontend/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - name: Install
+        run: pnpm install --frozen-lockfile
+      - name: Lint, type check and tests
+        run: |
+          pnpm lint
+          pnpm typecheck
+          pnpm test
+      - name: Build
+        run: pnpm build

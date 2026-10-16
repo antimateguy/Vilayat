@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* The Vilayat look: newsprint paper, ink, India green as the one interface
+   accent, and the German and Indian flag colours as decoration only. Text
+   always uses the ink tokens; the green ramp also carries data on the map and
+   in bars. The app is light only, to match the base map. */
+@theme {
+  --color-page: #f3f2f2;
+  --color-surface: #eae9e9;
+  --color-raised: #fbfafa;
+  --color-ink: #201e1d;
+  --color-ink-2: #605d5d;
+  --color-muted: #6b6767;
+  --color-hairline: #d7d3d3;
+  --color-axis: #bab6b6;
+  --color-accent: #127a0a;
+  --color-accent-strong: #0b5306;
+  --color-accent-wash: #eaf5e6;
+  --color-accent-soft: #cfe9c5;
+  --color-warning: #f2b705;
+  --color-warning-wash: #f3e2b0;
+  --color-critical: #c8102e;
+
+  /* Flag colours: stripes, the logo and a few highlights, never data. */
+  --color-de-black: #201e1d;
+  --color-de-red: #c8102e;
+  --color-de-gold: #f2b705;
+  --color-in-saffron: #e98a1f;
+  --color-in-green: #127a0a;
+  --color-in-chakra: #1d2a7a;
+  --color-saffron-ink: #9a5208;
+
+  --font-sans: var(--font-serif), Georgia, serif;
+  --font-serif: var(--font-source-serif), Georgia, serif;
+
+  --shadow-card: 0 12px 32px rgb(45 43 43 / 0.22);
+  --shadow-float: 0 3px 10px rgb(45 43 43 / 0.16);
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+::selection {
+  background: rgb(18 122 10 / 0.3);
+}
+
+/* One visible focus style everywhere, for keyboard users. */
+:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 2px;
+}
+
+input[type="range"] {
+  accent-color: var(--color-accent);
+}
+
+/* Small component classes from the design, shared by every view. */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+  .btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-page);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--color-accent-strong);
+  }
+  .btn-secondary {
+    border-color: var(--color-hairline);
+    background: var(--color-page);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    background: rgb(32 30 29 / 0.07);
+  }
+  .btn-ghost {
+    padding-inline: 6px;
+    color: var(--color-accent-strong);
+  }
+  .btn-ghost:hover {
+    background: rgb(18 122 10 / 0.1);
+  }
+  .field-label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink-2);
+  }
+  .input {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 12px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--color-ink);
+    background: var(--color-page);
+    border: 1px solid var(--color-hairline);
+    border-radius: 2px;
+  }
+  .input:hover {
+    border-color: rgb(32 30 29 / 0.45);
+  }
+  .input::placeholder {
+    color: var(--color-muted);
+  }
+  select.input {
+    appearance: none;
+    padding-right: 36px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23201e1d' stroke-width='1.6'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+    cursor: pointer;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 2px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #f8f4f4;
+    color: #444141;
+  }
+  .chip[aria-pressed="true"] {
+    background: var(--color-accent-wash);
+    color: var(--color-accent-strong);
+    box-shadow: inset 0 0 0 1px var(--color-accent-soft);
+  }
+  .kicker {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Running text on the information pages (About, Privacy and so on). */
+  .prose-info {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--color-ink);
+  }
+  .prose-info h2 {
+    margin-top: 2.5rem;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 1.5rem;
+  }
+  .prose-info h3 {
+    margin-top: 1.75rem;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .prose-info p,
+  .prose-info ul,
+  .prose-info ol,
+  .prose-info dl {
+    margin-top: 0.85rem;
+  }
+  .prose-info ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  .prose-info ol {
+    list-style: decimal;
+    padding-left: 1.25rem;
+  }
+  .prose-info li + li {
+    margin-top: 0.35rem;
+  }
+  .prose-info a {
+    color: var(--color-accent-strong);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .prose-info a:hover {
+    color: var(--color-accent);
+  }
+}
+
+/* The design's newsprint treatment for photographs: slightly desaturated,
+   with a fine dot screen printed over them. */
+.halftone {
+  position: relative;
+  overflow: hidden;
+  filter: grayscale(0.35) contrast(1.1);
+}
+.halftone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgb(0 0 0 / 0.22) 30%,
+    transparent 32%
+  );
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+}
+
+/* The map library's popup, restyled to match the panels. */
+.maplibregl-popup-content {
+  border-radius: 2px;
+  padding: 6px 10px;
+  font-family: var(--font-serif);
+  font-size: 13px;
+  box-shadow: var(--shadow-float);
+}
+
+/* A block of the detail panel the map has just pointed to: a short wash of
+   the accent colour that fades away. */
+@keyframes focus-flash {
+  from {
+    background-color: var(--color-accent-wash);
+    box-shadow: 0 0 0 6px var(--color-accent-wash);
+  }
+  to {
+    background-color: transparent;
+    box-shadow: 0 0 0 6px transparent;
+  }
+}
+.focus-flash {
+  border-radius: 2px;
+  animation: focus-flash 2.4s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .focus-flash {
+    animation-duration: 0.01s;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "area": { "id": 106, "name": "Neuhausen-Nymphenburg" },
+  "briefing": {
+    "text": "In Neuhausen-Nymphenburg, the rent figure of 770 EUR is a placeholder and not a real rent, and 44 percent of the city's areas have higher rent. Everyday amenities include 31 supermarkets and 46 cafes. There are 376 businesses that typically hire students within about 2 km, and 82 percent of the city has fewer such businesses nearby.",
+    "model": "gemini-3.5-flash-lite",
+    "generated_at": "2026-10-06T03:12:08.868398Z",
+    "uses_sample_rent": true
+  }
+}

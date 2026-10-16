@@ -1,0 +1,22 @@
+{
+  "understood": true,
+  "city_id": "munich",
+  "campus": {
+    "id": 10,
+    "name": "Main Campus",
+    "university_id": 6,
+    "university_short_name": "LMU"
+  },
+  "max_rent_eur": 725,
+  "max_commute_minutes": 35,
+  "employer": { "id": 40, "name": "BMW Group Headquarters" },
+  "weights": {
+    "commute": 0.35,
+    "rent": 0.5,
+    "amenities": 0.0,
+    "job_access": 0.15
+  },
+  "notes": [
+    "No campus of LMU was named, so Main Campus is used. Change it if you study elsewhere."
+  ]
+}

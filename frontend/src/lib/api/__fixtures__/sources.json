@@ -1,0 +1,65 @@
+[
+  {
+    "used_for": "Area boundaries",
+    "name": "Stadtbezirke München",
+    "publisher": "Landeshauptstadt München, GeodatenService",
+    "licence": "Datenlizenz Deutschland - Namensnennung - Version 2.0",
+    "as_of": "2026-10-05",
+    "is_sample": false,
+    "url": "https://geoportal.muenchen.de/geoserver/gsm_wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=gsm_wfs:vablock_stadtbezirk&outputFormat=application/json&srsName=EPSG:4326"
+  },
+  {
+    "used_for": "Campus locations",
+    "name": "OpenStreetMap (Nominatim geocoding of the campus address)",
+    "publisher": "OpenStreetMap contributors",
+    "licence": "ODbL",
+    "as_of": "2026-10-05",
+    "is_sample": false,
+    "url": "https://nominatim.openstreetmap.org/"
+  },
+  {
+    "used_for": "Amenities, job access and job hotspots",
+    "name": "OpenStreetMap places",
+    "publisher": "OpenStreetMap contributors",
+    "licence": "ODbL",
+    "as_of": "2026-10-05",
+    "is_sample": false,
+    "url": "https://www.openstreetmap.org/copyright"
+  },
+  {
+    "used_for": "Travel times",
+    "name": "mvv_gtfs.zip",
+    "publisher": "Münchner Verkehrs- und Tarifverbund GmbH (MVV)",
+    "licence": "CC BY",
+    "as_of": "2026-10-05",
+    "is_sample": false,
+    "url": "https://www.mvv-muenchen.de/fileadmin/mediapool/developer/opendata/gesamt_gtfs.zip"
+  },
+  {
+    "used_for": "Travel times",
+    "name": "munich.osm.pbf",
+    "publisher": "OpenStreetMap contributors, extract by BBBike",
+    "licence": "ODbL",
+    "as_of": "2026-10-05",
+    "is_sample": false,
+    "url": "https://download.bbbike.org/osm/bbbike/Muenchen/Muenchen.osm.pbf"
+  },
+  {
+    "used_for": "Rent estimates",
+    "name": "SAMPLE DATA (synthetic, not a real rent)",
+    "publisher": "SAMPLE DATA (synthetic, not a real rent)",
+    "licence": "not stated",
+    "as_of": "2026-10-05",
+    "is_sample": true,
+    "url": null
+  },
+  {
+    "used_for": "Employer sites",
+    "name": "SAMPLE LIST (proposed, not confirmed); address geocoded with OpenStreetMap Nominatim",
+    "publisher": "SAMPLE LIST (proposed, not confirmed); address geocoded with OpenStreetMap Nominatim",
+    "licence": "not stated",
+    "as_of": "2026-10-05",
+    "is_sample": true,
+    "url": null
+  }
+]

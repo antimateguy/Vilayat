@@ -1,0 +1,92 @@
+{
+  "about": "The allow-list for jobs.fetch_documents: the only pages the Ask feature's library is fetched from. Each page is fetched once per run, by an identified program that follows robots.txt and skips pages that reserve text and data mining. can_quote is true only where the text may be shown word for word: German laws are official works without copyright (section 5 UrhG). For every other page the app shows the answer and a link, never the passage itself.",
+  "allowed_domains": [
+    "www.gesetze-im-internet.de",
+    "service.berlin.de",
+    "stadt.muenchen.de",
+    "magazin.minijob-zentrale.de",
+    "www.verbraucherzentrale.de"
+  ],
+  "sources": [
+    {
+      "key": "law-residence-act-16b-studies",
+      "title": "Residence Act, section 16b: residence permit for studies (Aufenthaltsgesetz § 16b)",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html",
+      "city": null,
+      "can_quote": true,
+      "publisher": "Federal Ministry of Justice, gesetze-im-internet.de"
+    },
+    {
+      "key": "law-residence-act-20-job-search",
+      "title": "Residence Act, section 20: looking for a job after graduating (Aufenthaltsgesetz § 20)",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__20.html",
+      "city": null,
+      "can_quote": true,
+      "publisher": "Federal Ministry of Justice, gesetze-im-internet.de"
+    },
+    {
+      "key": "law-registration-act-17-register",
+      "title": "Federal Registration Act, section 17: registering and deregistering (Bundesmeldegesetz § 17)",
+      "url": "https://www.gesetze-im-internet.de/bmg/__17.html",
+      "city": null,
+      "can_quote": true,
+      "publisher": "Federal Ministry of Justice, gesetze-im-internet.de"
+    },
+    {
+      "key": "law-registration-act-19-landlord",
+      "title": "Federal Registration Act, section 19: the landlord's confirmation (Bundesmeldegesetz § 19)",
+      "url": "https://www.gesetze-im-internet.de/bmg/__19.html",
+      "city": null,
+      "can_quote": true,
+      "publisher": "Federal Ministry of Justice, gesetze-im-internet.de"
+    },
+    {
+      "key": "berlin-register-address",
+      "title": "Berlin: registering your main address (Wohnsitz anmelden)",
+      "url": "https://service.berlin.de/dienstleistung/120686/",
+      "city": "berlin",
+      "can_quote": false,
+      "publisher": "Land Berlin, service.berlin.de"
+    },
+    {
+      "key": "berlin-residence-permit-studies",
+      "title": "Berlin: applying for a residence permit for studies (Aufenthaltserlaubnis zum Studium)",
+      "url": "https://service.berlin.de/dienstleistung/305244/",
+      "city": "berlin",
+      "can_quote": false,
+      "publisher": "Land Berlin, service.berlin.de"
+    },
+    {
+      "key": "munich-register-address",
+      "title": "Munich: registering your address (Wohnsitzanmeldung)",
+      "url": "https://stadt.muenchen.de/service/info/wohnsitzanmeldung/1063475/",
+      "city": "munich",
+      "can_quote": false,
+      "publisher": "Landeshauptstadt München, stadt.muenchen.de"
+    },
+    {
+      "key": "munich-residence-permit-studies",
+      "title": "Munich: residence permit for studies (Aufenthaltserlaubnis – Studium)",
+      "url": "https://stadt.muenchen.de/service/info/aufenthaltserlaubnis-studium/1089337/",
+      "city": "munich",
+      "can_quote": false,
+      "publisher": "Landeshauptstadt München, stadt.muenchen.de"
+    },
+    {
+      "key": "minijob-students",
+      "title": "Minijob-Zentrale: minijobs for students",
+      "url": "https://magazin.minijob-zentrale.de/minijob-studierende/",
+      "city": null,
+      "can_quote": false,
+      "publisher": "Minijob-Zentrale (Deutsche Rentenversicherung Knappschaft-Bahn-See)"
+    },
+    {
+      "key": "broadcasting-fee-students",
+      "title": "Verbraucherzentrale: the broadcasting fee for students and trainees",
+      "url": "https://www.verbraucherzentrale.de/wissen/digitale-welt/fernsehen/wissenswertes-zum-rundfunkbeitrag-infos-fuer-studenten-und-auszubildende-5792",
+      "city": null,
+      "can_quote": false,
+      "publisher": "Verbraucherzentrale Bundesverband (consumer advice centre, not a public authority)"
+    }
+  ]
+}

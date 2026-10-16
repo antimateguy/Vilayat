@@ -1,0 +1,72 @@
+[
+  {
+    "id": 42,
+    "name": "Allianz Headquarters",
+    "lat": 48.15453,
+    "lon": 11.58856,
+    "is_sample": true
+  },
+  {
+    "id": 40,
+    "name": "BMW Group Headquarters",
+    "lat": 48.17691,
+    "lon": 11.56013,
+    "is_sample": true
+  },
+  {
+    "id": 48,
+    "name": "Google Munich",
+    "lat": 48.14293,
+    "lon": 11.54077,
+    "is_sample": true
+  },
+  {
+    "id": 44,
+    "name": "Infineon (Campeon)",
+    "lat": 48.07993,
+    "lon": 11.6145,
+    "is_sample": true
+  },
+  {
+    "id": 45,
+    "name": "MAN Truck & Bus",
+    "lat": 48.21707,
+    "lon": 11.47906,
+    "is_sample": true
+  },
+  {
+    "id": 47,
+    "name": "Microsoft Germany",
+    "lat": 48.17808,
+    "lon": 11.59388,
+    "is_sample": true
+  },
+  {
+    "id": 46,
+    "name": "MTU Aero Engines",
+    "lat": 48.21369,
+    "lon": 11.48093,
+    "is_sample": true
+  },
+  {
+    "id": 43,
+    "name": "Munich Re",
+    "lat": 48.15616,
+    "lon": 11.58873,
+    "is_sample": true
+  },
+  {
+    "id": 49,
+    "name": "SAP Labs Munich (Garching)",
+    "lat": 48.2641,
+    "lon": 11.66076,
+    "is_sample": true
+  },
+  {
+    "id": 41,
+    "name": "Siemens Headquarters",
+    "lat": 48.14431,
+    "lon": 11.57494,
+    "is_sample": true
+  }
+]

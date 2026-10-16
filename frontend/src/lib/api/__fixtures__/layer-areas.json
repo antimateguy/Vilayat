@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [11.48444, 48.21278],
+              [11.48452, 48.21286],
+              [11.47705, 48.21955],
+              [11.47303, 48.21937],
+              [11.46975, 48.21829],
+              [11.46346, 48.2155],
+              [11.48444, 48.21278]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "area_id": 120,
+        "name": "Allach-Untermenzing",
+        "cell_count": 22,
+        "rent_eur": 615,
+        "rent_is_sample": true,
+        "commute_minutes": 46,
+        "amenities_total": 17,
+        "job_access_score": 0.18894009216589863
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [11.59127, 48.15649],
+              [11.58942, 48.15657],
+              [11.59004, 48.15507],
+              [11.59002, 48.15447],
+              [11.58972, 48.154],
+              [11.58936, 48.15358],
+              [11.59127, 48.15649]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "area_id": 98,
+        "name": "Altstadt-Lehel",
+        "cell_count": 6,
+        "rent_eur": 865,
+        "rent_is_sample": true,
+        "commute_minutes": 20,
+        "amenities_total": 204,
+        "job_access_score": 0.988479262672811
+      }
+    }
+  ]
+}

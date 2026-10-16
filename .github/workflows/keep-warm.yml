@@ -1,0 +1,24 @@
+# Render's free plan puts the API to sleep after 15 idle minutes, and waking it
+# takes up to a minute. This pings the liveness check every 14 minutes during
+# the day in India and Germany (07:30 to 23:30 IST), so visitors rarely meet a
+# sleeping API. The ping does not touch the database, which can sleep.
+#
+# It runs only when the repository variable API_URL is set
+# (Settings > Secrets and variables > Actions > Variables), for example
+# https://vilayat-api.onrender.com
+name: Keep the API warm
+
+on:
+  schedule:
+    - cron: "*/14 2-17 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    if: ${{ vars.API_URL != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the API
+        run: curl --fail --silent --show-error --max-time 90 "${{ vars.API_URL }}/health/live"

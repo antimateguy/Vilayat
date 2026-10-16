@@ -1,0 +1,8 @@
+# Installed and built inside the image, so the host's copies are left out.
+node_modules/
+.next/
+out/
+public/maplibre/
+tsconfig.tsbuildinfo
+Dockerfile
+.dockerignore

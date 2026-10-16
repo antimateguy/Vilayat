@@ -1,0 +1,14 @@
+{
+  "error": {
+    "code": "invalid_request",
+    "message": "The request is not valid.",
+    "request_id": "57ce9d708676479cb3fd9b0d510322fd",
+    "details": [
+      {
+        "field": "max_commute_minutes",
+        "problem": "Input should be less than or equal to 180"
+      },
+      { "field": "max_rent_eur", "problem": "Field required" }
+    ]
+  }
+}

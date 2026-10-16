@@ -1,0 +1,65 @@
+[
+  {
+    "id": 7,
+    "name": "Hochschule München",
+    "short_name": "HM",
+    "campuses": [
+      {
+        "id": 12,
+        "university_id": 7,
+        "name": "Campus Lothstraße",
+        "lat": 48.15469,
+        "lon": 11.55398
+      },
+      {
+        "id": 13,
+        "university_id": 7,
+        "name": "Campus Pasing",
+        "lat": 48.14147,
+        "lon": 11.45096
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Ludwig-Maximilians-Universität München",
+    "short_name": "LMU",
+    "campuses": [
+      {
+        "id": 11,
+        "university_id": 6,
+        "name": "Campus Großhadern",
+        "lat": 48.11381,
+        "lon": 11.4654
+      },
+      {
+        "id": 10,
+        "university_id": 6,
+        "name": "Main Campus",
+        "lat": 48.15048,
+        "lon": 11.57984
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Technische Universität München",
+    "short_name": "TUM",
+    "campuses": [
+      {
+        "id": 9,
+        "university_id": 5,
+        "name": "Campus Garching",
+        "lat": 48.26585,
+        "lon": 11.67061
+      },
+      {
+        "id": 8,
+        "university_id": 5,
+        "name": "City Campus",
+        "lat": 48.14888,
+        "lon": 11.56777
+      }
+    ]
+  }
+]

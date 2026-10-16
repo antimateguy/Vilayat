@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "ai_unavailable",
+    "message": "The AI assistant is not available right now. Everything else works as usual.",
+    "request_id": "4f1ac729bc6641278de9d3fa75371a80",
+    "details": []
+  }
+}

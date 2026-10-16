@@ -1,0 +1,8 @@
+{
+  "city_id": "berlin",
+  "source": "OpenStreetMap via the Overpass API (ODbL, (c) OpenStreetMap contributors)",
+  "source_url": "https://overpass.private.coffee/api/interpreter",
+  "retrieved_on": "2026-10-05",
+  "elements": 21271,
+  "query": "[out:csv(::type,::id,::lat,::lon,name,shop,amenity,leisure;true;\"\\t\")][timeout:300];\n(\n  nwr[\"shop\"~\"^(bakery|books|chemist|clothes|convenience|department_store|electronics|shoes|supermarket)$\"](52.3,13.05,52.71,13.799999999999999);\n  nwr[\"amenity\"~\"^(bar|cafe|fast_food|library|pub|restaurant)$\"](52.3,13.05,52.71,13.799999999999999);\n  nwr[\"leisure\"~\"^(fitness_centre)$\"](52.3,13.05,52.71,13.799999999999999);\n);\nout center;\n"
+}

@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "not_found",
+    "message": "no campus with id 99999",
+    "request_id": "5ca6c95208e4477c8acd99965587380c",
+    "details": []
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "understood": false,
+  "city_id": null,
+  "campus": null,
+  "max_rent_eur": null,
+  "max_commute_minutes": null,
+  "employer": null,
+  "weights": null,
+  "notes": ["Not used: wants a balcony"]
+}
