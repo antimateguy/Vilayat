@@ -8,8 +8,8 @@ Snapshots of the points of interest the app uses, one pair of files per city:
   exact query.
 
 The data is © OpenStreetMap contributors, available under the Open Database
-License (ODbL): <https://www.openstreetmap.org/copyright>. The app must credit
-OpenStreetMap wherever these places or figures derived from them appear.
+License (ODbL): <https://www.openstreetmap.org/copyright>. The site credits
+OpenStreetMap on the map and on its Data and sources page.
 
 | City | Places | Retrieved |
 | --- | --- | --- |

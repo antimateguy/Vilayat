@@ -2,8 +2,12 @@
 
 **Find the Berlin or Munich neighbourhood that fits your rent, your commute and a part-time job.**
 
+**Live:** <https://vilayat.pages.dev> · API documentation:
+<https://vilayat.onrender.com/docs> (the free API sleeps when idle, so the first
+visit can take up to a minute)
+
 Vilayat (विलायत, "abroad") helps students moving from India to Germany decide
-*where* to look for a home before they look at a single flat. Pick a
+_where_ to look for a home before they look at a single flat. Pick a
 university campus, a rent ceiling and the longest commute you will accept, and
 Vilayat ranks every district of the city, shows them on a map, explains each
 position in plain words and links to the listing portals for the areas you
@@ -25,6 +29,8 @@ choose.
   lines' colours. With a job pinned, the afternoon leg from campus to work too.
 - **A day with a job.** Pin an employer and see the whole day's travel: home,
   campus, work, home.
+- **The network at a glance.** Show the U-Bahn, S-Bahn and tram lines, every
+  campus and the employers on the map; the map frames what matters by itself.
 - **Ask about the paperwork.** Questions on registration, the residence permit,
   working while studying and the broadcasting fee are answered from stored
   official sources, with every statement citing its source.
@@ -36,11 +42,11 @@ choose.
 A language model (Google Gemini) only translates and explains; it never decides
 the ranking, which is ordinary code that gives the same answer every time.
 
-| Where | What the model does | What the code checks |
-| --- | --- | --- |
-| Sentence search | Fills in a form from your sentence | Campuses and employers must exist; numbers must be in range |
-| Ask | Answers from the closest stored passages | No close passage: no answer. Every answer must cite a passage, and every figure must appear in it |
-| Area summaries | Writes two or three sentences per area, offline | Only the area's own figures and name may appear |
+| Where           | What the model does                             | What the code checks                                                                              |
+| --------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Sentence search | Fills in a form from your sentence              | Campuses and employers must exist; numbers must be in range                                       |
+| Ask             | Answers from the closest stored passages        | No close passage: no answer. Every answer must cite a passage, and every figure must appear in it |
+| Area summaries  | Writes two or three sentences per area, offline | Only the area's own figures and name may appear                                                   |
 
 The free tier's daily allowance is a hard limit: every request is counted
 before it is sent, and when the day's allowance is used up the AI features say
@@ -65,11 +71,11 @@ To switch on the AI features, copy `.env.example` to `.env`, add a key from
 [Google AI Studio](https://aistudio.google.com/) as `GEMINI_API_KEY=...`, and
 run `docker compose up -d` again. `.env` is ignored by Git.
 
-| Address | What |
-| --- | --- |
-| <http://localhost:3000> | The website |
-| <http://localhost:8000/docs> | The API, with interactive documentation |
-| <http://localhost:8000/health> | API and database health |
+| Address                        | What                                    |
+| ------------------------------ | --------------------------------------- |
+| <http://localhost:3000>        | The website                             |
+| <http://localhost:8000/docs>   | The API, with interactive documentation |
+| <http://localhost:8000/health> | API and database health                 |
 
 ## Architecture
 
@@ -88,14 +94,14 @@ plain Python concepts, `services/` the use cases, `ports/` the interfaces, and
 slow happens while a visitor waits: every travel time, journey and summary is
 computed in advance.
 
-| Layer | Technology |
-| --- | --- |
+| Layer    | Technology                                                                        |
+| -------- | --------------------------------------------------------------------------------- |
 | Frontend | Next.js 16 (static export), React 19, Tailwind CSS 4, TanStack Query, MapLibre GL |
-| Backend | Python 3.12, FastAPI, Pydantic, SQLAlchemy, Alembic |
-| Database | PostgreSQL 17, PostGIS, pgvector, H3 hexagons |
-| Routing | R5 via r5py (offline, Java 21) |
-| AI | Gemini (text and embeddings) through the `google-genai` SDK |
-| Hosting | Cloudflare Pages, Render, Neon |
+| Backend  | Python 3.12, FastAPI, Pydantic, SQLAlchemy, Alembic                               |
+| Database | PostgreSQL 17, PostGIS, pgvector, H3 hexagons                                     |
+| Routing  | R5 via r5py (offline, Java 21)                                                    |
+| AI       | Gemini (text and embeddings) through the `google-genai` SDK                       |
+| Hosting  | Cloudflare Pages, Render, Neon                                                    |
 
 ## Repository
 
@@ -103,29 +109,38 @@ computed in advance.
 backend/    FastAPI app, offline jobs and tests (managed by uv)
 frontend/   Next.js app, served as static files
 db/         Database image, first-start scripts and the seed dump
-docs/       Developer guide, data storage, deployment
+docs/       Developer guide
 ```
 
-- [Developer guide](docs/developer-guide.md): setup, running the offline jobs,
-  tests, the API and the AI layer in detail.
-- [Where the data lives](docs/data-storage.md): every file and table, and the
-  job that writes it.
-- [Deployment](docs/deployment.md): Cloudflare Pages, Render and Neon, step by
-  step.
+The [developer guide](docs/developer-guide.md) covers local development, how a
+search is decided, the AI layer, the API, the data, the offline jobs, the
+checks and the deployment.
+
+## Hosting
+
+| Part     | Service                                                                |
+| -------- | ---------------------------------------------------------------------- |
+| Website  | Cloudflare Pages                                                       |
+| API      | Render (Docker, from `render.yaml`)                                    |
+| Database | Neon (PostgreSQL with PostGIS and pgvector), filled from the seed dump |
+
+GitHub Actions runs lint, type checks, tests and the build on every push; the
+API is deployed only after they pass. Secrets (the database address and the
+Gemini key) are set in the hosting dashboards and never stored in the repository.
 
 ## Data and credits
 
-| Data | Source | Licence |
-| --- | --- | --- |
-| District boundaries | Geoportal Berlin; Landeshauptstadt München | dl-de/zero-2.0; dl-de/by-2.0 |
-| Timetables | VBB Verkehrsverbund Berlin-Brandenburg; Münchner Verkehrs- und Tarifverbund (MVV) | CC BY 4.0; CC BY |
-| Streets, places, campus locations | © OpenStreetMap contributors | ODbL |
-| Base map | OpenFreeMap (OpenStreetMap data) | ODbL |
-| University photographs | Wikimedia Commons (credits in `frontend/public/universities/README.md`) | CC BY-SA, CC0 |
-| Ask documents | German federal law (gesetze-im-internet.de), Berlin and Munich service pages, Minijob-Zentrale, Verbraucherzentrale | Laws: no copyright (§ 5 UrhG). Other pages are linked, not reproduced |
+| Data                              | Source                                                                                                              | Licence                                                               |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| District boundaries               | Geoportal Berlin; Landeshauptstadt München                                                                          | dl-de/zero-2.0; dl-de/by-2.0                                          |
+| Timetables                        | VBB Verkehrsverbund Berlin-Brandenburg; Münchner Verkehrs- und Tarifverbund (MVV)                                   | CC BY 4.0; CC BY                                                      |
+| Streets, places, campus locations | © OpenStreetMap contributors                                                                                        | ODbL                                                                  |
+| Base map                          | OpenFreeMap (OpenStreetMap data)                                                                                    | ODbL                                                                  |
+| University photographs            | Wikimedia Commons (credits in `frontend/public/universities/README.md`)                                             | CC BY-SA, CC0                                                         |
+| Ask documents                     | German federal law (gesetze-im-internet.de), Berlin and Munich service pages, Minijob-Zentrale, Verbraucherzentrale | Laws: no copyright (§ 5 UrhG). Other pages are linked, not reproduced |
 
 **Rents and the employer list are placeholders** until real data is supplied;
-the site marks them with an asterisk and explains this on its *Data and
-sources* page.
+the site marks them with an asterisk and explains this on its
+[Data and sources](https://vilayat.pages.dev/data) page.
 
 Vilayat is information, not legal or visa advice.

@@ -1,7 +1,7 @@
 # University photographs
 
 All from Wikimedia Commons, downloaded 2026-10-16 at 1920 px wide. The
-licences require the photographer to be named; the app shows each credit next
+licences require the photographer to be named; the site shows each credit next
 to its photo (`src/lib/universities.ts`).
 
 | File              | Shows                             | Photographer   | Licence         | Source                                                                                                                             |
@@ -13,9 +13,3 @@ to its photo (`src/lib/universities.ts`).
 | `hu-berlin.jpg`   | HU Berlin main building           | Christian Wolf | CC BY-SA 3.0 DE | [Commons](https://commons.wikimedia.org/wiki/File:Frontansicht_des_Hauptgeb%C3%A4udes_der_Humboldt-Universit%C3%A4t_in_Berlin.jpg) |
 | `tu-berlin.jpg`   | TU Berlin main building           | Gunnar Klack   | CC BY-SA 4.0    | [Commons](https://commons.wikimedia.org/wiki/File:Technische-Universitaet-Hauptgebaeude-Berlin-Charlottenburg-06-2017.jpg)         |
 | `htw-berlin.jpg`  | HTW Berlin, Campus Wilhelminenhof | Gunnar Klack   | CC BY-SA 4.0    | [Commons](https://commons.wikimedia.org/wiki/File:2024-10-20-HTW-Campus-Wilhelminenhofstr-Berlin-Oberschoeneweide.jpg)             |
-
-The photos supplied in `uniphoto/` were not used: three of them show other
-places (Rothenburg ob der Tauber, Hamburg's Speicherstadt, Munich's
-Marienplatz) rather than the universities their names suggest, the fourth is
-named after TU Dresden, which the app does not cover, and their sources are
-unknown.

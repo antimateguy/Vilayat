@@ -10,8 +10,8 @@ result. Coordinates are WGS84 (EPSG:4326), longitude first.
 | `munich_stadtbezirke.geojson` | Stadtbezirke München (25 city districts) | Landeshauptstadt München, GeodatenService | [Datenlizenz Deutschland - Namensnennung - Version 2.0](https://www.govdata.de/dl-de/by-2-0) | 2026-10-05 |
 
 The Munich licence requires attribution: "Landeshauptstadt München,
-GeodatenService", with the licence named. The app must show it wherever the
-boundaries appear (frontend, Module 7).
+GeodatenService", with the licence named. The site shows it on the map and on
+its Data and sources page.
 
 The Munich file has 27 features for 25 districts: a district with a detached
 part is listed once per part. The loader merges them.

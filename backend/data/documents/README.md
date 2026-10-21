@@ -1,21 +1,20 @@
 # Documents for question answering
 
-## The files here are sample notes, not official texts
+## The notes in this folder are summaries, not official texts
 
-Real documents have not been supplied yet. Each file in this folder is a short
-note written for this project. It summarises one official page, which is named
-in `source_url` and was read on the date in `retrieved_on`. The notes are not
-the official wording, are not checked by the publishers, and will go out of
-date. Every file therefore has `is_sample: true`, and the app puts an asterisk
-next to every source an answer cites, explained on the Data and sources page.
-Do not rely on them for a visa, permit or contract decision; follow the link to
-the official page.
+Each Markdown file in this folder is a short note written for this project. It
+summarises one official page, which is named in `source_url` and was read on
+the date in `retrieved_on`. The notes are not the official wording, are not
+checked by the publishers, and will go out of date. Every note therefore has
+`is_sample: true`, and the site puts an asterisk next to every answer source
+that is a note. Do not rely on them for a visa, permit or contract decision;
+follow the link to the official page.
 
 Two topics were left out because the official pages could not be read
 automatically: the semester ticket in Berlin and the halls of residence in
 Munich. Questions about them get the "no evidence" answer.
 
-## Official pages (the larger library)
+## Official pages
 
 `sources.json` lists the official pages the library is built from, and the
 only domains they may come from. `uv run python -m jobs.fetch_documents` reads
@@ -26,7 +25,7 @@ below, with `is_sample: false` and `can_quote`. `fetched/` is not committed.
 copyright; for the other pages the app answers and links but does not show the
 text. To add a page, add an entry to `sources.json` and run both jobs.
 
-## Supplying real documents
+## Adding documents
 
 Put one Markdown file per document in this folder and run:
 

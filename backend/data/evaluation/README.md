@@ -19,5 +19,5 @@ In `intent_sentences.json` the expected values use names, not database ids. A
 university named without a campus is expected to give its main campus. A field
 that is absent means the sentence should leave that setting alone.
 
-To extend the evaluation, add entries to these files and run the evaluation again.
-Real questions from students would be the most useful addition.
+To extend the evaluation, add entries to these files. Real questions from
+students would be the most useful addition.

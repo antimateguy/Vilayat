@@ -2,17 +2,17 @@
 
 ## `sample_employers.csv` is a proposed list, not a confirmed one
 
-The curated list of corporate employer sites has not been supplied yet.
-`sample_employers.csv` is a stand-in: ten well-known sites per city. Each
+No confirmed list of employer sites is included yet. `sample_employers.csv`
+is a placeholder: ten well-known sites per city. Each
 address was turned into a coordinate with OpenStreetMap's geocoder (Nominatim,
 © OpenStreetMap contributors, ODbL), which confirms that the address exists but
 not that the company is at it. Every row therefore has `is_sample=true`, and the
-app labels these sites as sample data.
+site marks the list with an asterisk.
 
 Two Munich-region sites lie outside the city boundary (Infineon in Neubiberg,
 SAP in Garching). That is fine: an employer is a travel destination, not an area.
 
-## Supplying the real list
+## Adding a confirmed list
 
 Provide a CSV file (UTF-8, comma-separated, with this header row) and load it:
 
